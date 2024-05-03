@@ -1,0 +1,54 @@
+{
+  "status": 200,
+  "data": [
+    {
+      "title": "Aquaman And The Lost Kingdom | Trailer",
+      "creator": "DC",
+      "creator_photo": "https://upload.wikimedia.org/wikipedia/commons/7/7d/DC_Comics_Logo.jpg",
+      "description": "Director James Wan and Aquaman himself, Jason Momoa—along with Patrick Wilson, Amber Heard, Yahya Abdul-Mateen II and Nicole Kidman—return in the sequel to the highest-grossing DC film of all time: “Aquaman and the Lost Kingdom.”\nHaving failed to defeat Aquaman the first time, Black Manta, still driven by the need to avenge his father's death, will stop at nothing to take Aquaman down once and for all. This time Black Manta is more formidable than ever before, wielding the power of the mythic Black Trident, which unleashes an ancient and malevolent force. To defeat him, Aquaman will turn to his imprisoned brother Orm, the former King of Atlantis, to forge an unlikely alliance. Together, they must set aside their differences in order to protect their kingdom and save Aquaman's family, and the world, from irreversible destruction.",
+      "release_date": "2023-09-14",
+      "duration": 166,
+      "source_type": "local",
+      "source": "assets/videos/aquaman_and_the_lost_kingdom_trailer.mp4",
+      "cover_path": "assets/imgs/cover_aquaman_and_the_lost_kingdom_trailer.jpeg",
+      "views_count": 1082000
+    },
+    {
+      "title": "Marvel Studios' Loki | Official Trailer | Disney+",
+      "creator": "Marvel Entertainment",
+      "creator_photo": "https://i.pinimg.com/originals/b5/34/df/b534df05c4b06ebd32159b2f9325d83f.jpg",
+      "description": "After stealing the Tesseract during the events of “Avengers: Endgame,” an alternate version of Loki is brought to the mysterious Time Variance Authority, a bureaucratic organization that exists outside of time and space and monitors the timeline. They give Loki a choice: face being erased from existence due to being a “time variant” or help fix the timeline and stop a greater threat.",
+      "release_date": "2021-04-05",
+      "duration": 136,
+      "source_type": "local",
+      "source": "assets/videos/marvel_studios'_loki_official_trailer_disney+.mp4",
+      "cover_path": "assets/imgs/cover_marvel_studios'_loki_official_trailer_disney+.jpeg",
+      "views_count": 21098
+    },
+    {
+      "title": "Marvel Studios' Loki Season 2 | Official Trailer | Disney+",
+      "creator": "Marvel Entertainment",
+      "creator_photo": "https://i.pinimg.com/originals/b5/34/df/b534df05c4b06ebd32159b2f9325d83f.jpg",
+      "description": "In the aftermath of Season 1, Loki finds himself in a battle for the soul of the Time Variance Authority. Along with Mobius, Hunter B-15 and a team of new and returning characters, Loki navigates an ever-expanding and increasingly dangerous multiverse in search of Sylvie, Judge Renslayer, Miss Minutes and the truth of what it means to possess free will and glorious purpose.",
+      "release_date": "2023-07-31",
+      "duration": 145,
+      "source_type": "local",
+      "source": "assets/videos/marvel_studios'_loki_season_2_official_trailer_disney+.mp4",
+      "cover_path": "assets/imgs/cover_marvel_studios'_loki_season_2_official_trailer_disney+.jpeg",
+      "views_count": 90128612
+    },
+    {
+      "title": "FutureBuilder (Widget of the Week)",
+      "creator": "Flutter",
+      "creator_photo": "https://logowik.com/content/uploads/images/flutter5786.jpg",
+      "description": "Have a Future and need some widgets to display its values? Try FutureBuilder! Add a Future and a build method, and you'll create widgets based on the Future state and update them as it changes.",
+      "release_date": "2018-01-23",
+      "duration": 89,
+      "source_type": "network",
+      "source": "https://github.com/AkhmadhetaHPras/host-assets/raw/main/media-player/flutter_future_builder_widget_of_the_week.mp4",
+      "cover_path": "https://github.com/AkhmadhetaHPras/host-assets/blob/main/media-player/cover_flutter_future_builder_widget_of_the_week.jpeg?raw=true",
+      "views_count": 80912801
+    }
+  ],
+  "error": ""
+}
