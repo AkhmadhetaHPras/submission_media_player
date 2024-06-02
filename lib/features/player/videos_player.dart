@@ -3,8 +3,8 @@ import 'package:media_player/config/themes/main_color.dart';
 import 'package:media_player/data/video_model.dart';
 import 'package:media_player/features/player/components/controll_button.dart';
 import 'package:media_player/features/player/components/loading_video_placeholder.dart';
-import 'package:media_player/features/player/components/video_information.dart';
 import 'package:media_player/features/player/components/video_indicator.dart';
+import 'package:media_player/features/player/components/video_information.dart';
 import 'package:media_player/shared_components/app_bar/back_button_app_bar_leading.dart';
 import 'package:media_player/shared_components/app_bar/custom_app_bar.dart';
 import 'package:media_player/utils/debouncer.dart';
@@ -19,9 +19,10 @@ class VideosPlayer extends StatefulWidget {
 
 @visibleForTesting
 class VideosPlayerState extends State<VideosPlayer> {
-  final Duration animDuration = const Duration(milliseconds: 300);
   late Video video;
+
   late VideoPlayerController controller;
+  final Duration animDuration = const Duration(milliseconds: 300);
   Duration duration = const Duration();
   Duration position = const Duration();
   late Future<void> initializeVideoPlayerFuture;
@@ -31,14 +32,14 @@ class VideosPlayerState extends State<VideosPlayer> {
   void didChangeDependencies() {
     super.didChangeDependencies();
     video = ModalRoute.of(context)!.settings.arguments as Video;
-    initVideoController();
-  }
-
-  void initVideoController() {
     video.sourceType == "local"
         ? controller = VideoPlayerController.asset(video.source!)
         : controller =
             VideoPlayerController.networkUrl(Uri.parse(video.source!));
+    initVideoController();
+  }
+
+  void initVideoController() {
     initializeVideoPlayerFuture = controller.initialize().then((value) {
       setState(() {
         duration = controller.value.duration;
@@ -54,10 +55,16 @@ class VideosPlayerState extends State<VideosPlayer> {
     );
   }
 
-  @override
-  void dispose() {
-    super.dispose();
-    controller.dispose();
+  offVisible() {
+    setState(() {
+      isVisible = false;
+    });
+  }
+
+  onVisible() {
+    setState(() {
+      isVisible = true;
+    });
   }
 
   void switchControllVisibility() {
@@ -82,16 +89,10 @@ class VideosPlayerState extends State<VideosPlayer> {
     }
   }
 
-  offVisible() {
-    setState(() {
-      isVisible = false;
-    });
-  }
-
-  onVisible() {
-    setState(() {
-      isVisible = true;
-    });
+  @override
+  void dispose() {
+    super.dispose();
+    controller.dispose();
   }
 
   @override
@@ -105,12 +106,10 @@ class VideosPlayerState extends State<VideosPlayer> {
         key: const Key('root_widget'),
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          /// video section
           FutureBuilder(
             future: initializeVideoPlayerFuture,
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.done) {
-                /// video player
                 return GestureDetector(
                   key: const Key('video_section'),
                   onTap: switchControllVisibility,
@@ -127,8 +126,6 @@ class VideosPlayerState extends State<VideosPlayer> {
                             AnimatedOpacity(
                               duration: animDuration,
                               opacity: isVisible ? 1 : 0,
-
-                              /// video progress indicator
                               child: VideoIndicator(
                                 position: position,
                                 duration: duration,
@@ -151,12 +148,11 @@ class VideosPlayerState extends State<VideosPlayer> {
                           splashR: 26,
                           icSize: 36,
                         ),
-                      )
+                      ),
                     ],
                   ),
                 );
               } else {
-                /// placeholder on video load
                 return LoadingVideoPlaceholder(
                   sourceType: video.sourceType!,
                   cover: video.coverPath!,
@@ -164,17 +160,18 @@ class VideosPlayerState extends State<VideosPlayer> {
               }
             },
           ),
-          const SizedBox(height: 4),
-
+          const SizedBox(
+            height: 4,
+          ),
           Expanded(
             child: SingleChildScrollView(
               padding: const EdgeInsets.symmetric(
                 vertical: 12,
                 horizontal: 8,
               ),
-
-              /// video information
-              child: VideoInformation(video: video),
+              child: VideoInformation(
+                video: video,
+              ),
             ),
           ),
         ],
