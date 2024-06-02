@@ -18,7 +18,7 @@ class CircleComponent extends StatelessWidget {
         scale: scale,
         child: child ??
             Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 // color: color,
               ),
