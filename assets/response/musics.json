@@ -1,0 +1,56 @@
+{
+  "status": 200,
+  "data": [
+    {
+      "title": "Night Changes",
+      "artist": "One Direction",
+      "album_name": "FOUR",
+      "release_year": "2014",
+      "duration": 240,
+      "source_type": "local",
+      "source": "assets/musics/one_direction_night_changes.mp3",
+      "cover_path": "assets/imgs/cover_one_direction_night_changes.jpeg"
+    },
+    {
+      "title": "Story Of My Life",
+      "artist": "One Direction",
+      "album_name": "Midnight Memories",
+      "release_year": "2013",
+      "duration": 245,
+      "source_type": "local",
+      "source": "assets/musics/one_direction_story_of_my_life.mp3",
+      "cover_path": "assets/imgs/cover_one_direction_story_of_my_life.jpeg"
+    },
+    {
+      "title": "Yellow",
+      "artist": "Coldplay",
+      "album_name": "Parachutes",
+      "release_year": "2000",
+      "duration": 269,
+      "source_type": "local",
+      "source": "assets/musics/coldplay_yellow.mp3",
+      "cover_path": "assets/imgs/cover_coldplay_yellow.jpeg"
+    },
+    {
+      "title": "The Scientist",
+      "artist": "Coldplay",
+      "album_name": "A Rush of Blood to the Head",
+      "release_year": "2002",
+      "duration": 311,
+      "source_type": "local",
+      "source": "assets/musics/coldplay_the_scientist.mp3",
+      "cover_path": "assets/imgs/cover_coldplay_the_scientist.jpeg"
+    },
+    {
+      "title": "STAY",
+      "artist": "The Kid LAROI, Justin Bieber",
+      "album_name": "Stay",
+      "release_year": "2021",
+      "duration": 157,
+      "source_type": "network",
+      "source": "https://github.com/AkhmadhetaHPras/host-assets/raw/main/media-player/justin_bieber_stay.mp3",
+      "cover_path": "https://github.com/AkhmadhetaHPras/host-assets/blob/main/media-player/cover_justin_bieber_stay.jpeg?raw=true"
+    }
+  ],
+  "error": ""
+}
